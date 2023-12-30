@@ -1,5 +1,6 @@
 package com.jwttoken.security.controllers;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +21,10 @@ public class UserController {
 	@GetMapping("/users")
 	public List<User> getUser() {
 		return userService.getUsers();
+	}
+
+	@GetMapping("/current-user")
+	public String getCurrentUser(Principal principal) {
+		return principal.getName();
 	}
 }
