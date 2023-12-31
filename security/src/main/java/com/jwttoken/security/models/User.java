@@ -17,4 +17,5 @@ public class User {
 	private String name;
 	private double marks;
 	private String email;
+	//
 }
