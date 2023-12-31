@@ -1,6 +1,7 @@
 package com.jwttoken.security.models;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,12 +11,9 @@ import lombok.ToString;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @ToString
-public class User {
-
-	private String id;
-	private String name;
-	private double marks;
+public class JwtRequest {
 	private String email;
-	//
+	private String password;
 }
